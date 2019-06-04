@@ -1,0 +1,110 @@
+#order-component-root {
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  height: 90vh;
+  width: 100vw;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#order-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  height: 85%;
+  width: 70vh;
+  align-items: stretch;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  overflow-y: scroll;
+  background-color: #f3c5cb;
+}
+
+#order-window > header {
+  position: sticky;
+  top: -1px;
+  background-color: inherit;
+  z-index: 5;
+  box-shadow: 0 0px 2px 0px;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+#close-icon {
+  cursor: pointer;
+}
+
+form {
+  width: 100%;
+  padding: 25px 10%;
+  flex-basis: 100%;
+  flex-shrink: 2;
+  align-items: stretch;
+}
+
+form > * {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: initial;
+}
+
+input, select {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding-left: 10px;
+}
+
+fieldset {
+  border: none;
+}
+
+.my-valid {
+  border-left: 3px solid rgb(1, 170, 1);
+}
+
+input:not(.my-valid), select:not(.my-valid) {
+  border-left: 3px solid rgb(224, 3, 3);
+}
+
+fieldset {
+  position: relative;
+}
+
+#toggle-usemail {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  z-index: 10;
+}
+
+#toggle-usemail > button {
+  padding: 0 4px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.7em;
+  background-color: transparent;
+  color: #a30320;
+  border: 1px solid #a30320;
+  border-radius: 1000px;
+}
+
+#toggle-usemail > button:hover {
+  background-color: #a30320;
+  color: white;
+}
+
+#toggle-usemail > button:active {
+  background-color: transparent;
+  color: #a30320;
+}
+
+#submit-button {
+  align-self: center;
+}

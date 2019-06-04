@@ -1,0 +1,31 @@
+<header id="page-header" class="flex-box-hor global-bg">
+  <a routerLink="/" id="logo">
+    <img id="logo" width="50" src="../../assets/logo.png">
+  </a>
+
+  <div id="page-title" class="flex-box-vert">
+    <h1 id="home-title" *ngIf="caller === 'home'">
+      <em>Promavin Couture</em>
+    </h1>  
+
+    <h1 id="other-title" *ngIf="caller !== 'home'">
+      <span>PROMAVIN</span> | <em>{{caller | titlecase}}</em>
+    </h1>
+  </div>
+  
+  <nav id="nav-buttons-wrapper" class="flex-box-hor">
+    <div class="nav-button-div flex-box-vert" *ngFor="let target of navTargets">
+      <a *ngIf="target !== 'contact'" routerLink="/{{target}}">
+        <button class="button nav-button">
+          {{target | titlecase}}
+        </button>
+      </a>
+
+      <button *ngIf="target === 'contact'" class="button nav-button"
+         (click)="gotoSection('fragment', 'contact-us')"
+        >
+        Contact Us
+      </button>
+    </div>
+  </nav>
+</header>

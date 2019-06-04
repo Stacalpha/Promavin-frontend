@@ -1,0 +1,17 @@
+<div class="product-card polaroid soft-white-bg"
+     [class.featured-item]="caller==='home'"> <!--(click)="openProductModal()"-->
+  <img class="product-card-img polaroid-img" src="mainImg">
+
+  <div class="polaroid-bezel">
+    <em class="product-name">{{product.name}}</em> 
+    <br>
+
+    <span class="product-price">&#8358;{{product.price}}</span>
+    
+    <span class="delivery-count">{{product.deliveryCount}} delivered</span>
+
+    <button class="polaroid-action button" (click)="orderProduct();">
+      Get it!
+    </button>
+  </div>
+</div>

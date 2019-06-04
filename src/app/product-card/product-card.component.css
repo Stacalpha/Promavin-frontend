@@ -1,0 +1,31 @@
+.product-card {
+  height: 55vh;
+  width: 40vh;
+  margin: 50px;
+}
+
+.featured-item { /*Must appear below .product-card for specificity.*/
+  height: 50vh;
+  width: 40vh;
+  margin-right: 60px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 300;
+  margin: 100px 0;
+}
+
+.product-price {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.delivery-count {
+  font-size: 1rem;
+  text-align: right;
+  position: absolute;
+  bottom: 10%;
+  left: 3%;
+}

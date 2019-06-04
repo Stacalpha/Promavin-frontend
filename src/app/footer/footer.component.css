@@ -1,0 +1,108 @@
+#page-footer {
+  position: relative;
+  margin-top: 10px;
+	padding-top: 8px;     
+  justify-content: space-between;
+  min-height: 60vh;
+  width: 100vw;
+	background-image: radial-gradient(circle, #e61109, #bd001b, #85051c, #4e0a16); /* #1e0002,*/
+	/*radial-gradient(circle, #fc4774, #ce3656, #a2263c, #781625, #500710);*/
+  /*Red:- background-image: radial-gradient(circle, #f5130a, #bd001b, #85051c, #4e0a16); /* #1e0002,*/
+  /*Blue:- background-image: radial-gradient(circle, #2876d2, #215da8, #184580);/*, #0e2e5a, #042049*/    
+}
+
+#footer-action-button {
+  margin-top:10px;
+  min-width: 150px;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 80, 0.4); /*Blue:- rgba(80, 0, 0, 0.4);*/
+}
+
+#contact-us {
+  height: 30vh; /*Half the height of the footer section*/
+  width: 100%;
+  align-items: flex-end;
+}
+
+#contact-us:focus > div {
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.6);
+}
+
+#footer-left {
+  padding: 20px 0;
+}
+
+#footer-left:focus {
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.6);
+}
+
+#footer-right {
+  padding: 20px 0;
+}
+    
+.footer-icons {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	padding: 5px;
+	box-shadow: 1px 1px 3px 0 black;
+	background-image: radial-gradient(circle farthest-corner, #85051c, #f5130a);
+}
+
+.footer-icons > img {
+	height: 20px;
+	width: 20px;
+}
+
+.contact-icons {
+	border-radius: 50% 50% 50% 0;
+	padding: 10px;
+}
+
+.social-icons {
+	border-radius: 50%;
+	padding: 10px;
+}
+	
+.labeled-icon {
+	height: 60px;
+  margin-bottom: 10px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.labeled-icon > img {
+	height: 40px;
+	width: 40px;
+	border-radius: 4px;
+  margin: 0;
+}
+
+.labeled-icon > span {
+	border: 1px solid #f5130a; /*Blue:- #143868;*/
+	border-left: none; 
+	font-size: 15px;
+	padding: 7px 10px;
+	border-radius: 4px; 
+}
+
+#contact-im > span {
+	border: 1px solid #f5130a; /*Blue:- #143868;*/
+	border-right: none;
+}
+
+#site-credits {
+	margin-top: 20px;
+	width: 100vw;
+  line-height: 5vh;
+	background-color: rgba(221, 196, 186, 0.2);
+	box-shadow: 0 -1px 2px 1px rgba(221, 196, 186, 0.6);
+}
+
+#site-credits > p {
+	padding: 5px 0;
+	font-family: 'sans serif';
+	z-index: 2;
+}

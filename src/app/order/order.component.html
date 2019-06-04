@@ -1,0 +1,108 @@
+<div id="order-component-root">
+  <div id="order-window" class="flex-box-vert">
+    <header class="flex-box-hor">
+      <img src="../res/icons/shoppingcart" id="cart-icon">
+      <h2>{{windowTitle}}</h2>
+      <img src="../res/icons/close" id="close-icon" (click)="closeOrder()">
+    </header>
+
+    <form #orderForm="ngForm" (ngSubmit)="onSubmit()" class="flex-box-vert">
+      <label title="Your full name.">Name:
+        <input name="name" [(ngModel)]="formData.name"
+               type="text" (blur)="onTouched('name'); nameValidator()"
+               (input)="nameValidator()" [class.my-valid]="nameValidity"
+               placeholder="Ciroma Adekunle Chukwuma"
+               required autofocus>
+        <small class="error-message">{{nameError}}</small>
+      </label>
+
+      <label title="Home or Office. Where you'll recieve delivery.">Location: 
+        <select name="location" (blur)="onTouched('location'); locationValidator()"
+                [(ngModel)]="formData.location"
+                [class.my-valid]="locationValidity"
+                (change)="locationValidator()" required>
+            <option value="Agege">Agege</option>
+            <option value="Ogba">Ogba</option>
+            <option value="Ikeja">Ikeja</option>
+            <option value="Berger">Berger</option>
+        </select>
+        <small class="error-message">
+          <img src="../info.png" alt="Info icon. ">
+          We're working hard to bring our service to more locations.
+          <br><span>{{locationError}}</span>
+        </small>
+      </label>
+
+      <fieldset title="Your contact info - eMail or Phone">
+        <div id="toggle-usemail">
+          <button type="button" title="{{useMailBtnText}}"
+                  (click)="toggleContactPref()">
+            {{useMailBtnText}}
+          </button>
+        </div>
+        <label>{{contactLabel}}:
+          <input name="email" *ngIf="formData.contactPref === 'eMail'"
+                 type="email" title="Your eMail address."
+                 [(ngModel)]="formData.email" placeholder="yourname@example.com"
+                 (blur)="onTouched('email'); eMailValidator()" (input)="eMailValidator()"
+                 [class.my-valid]="eMailValidity" required>                 
+          <input name="phone" title="Your phone number."
+                 type="tel" *ngIf="formData.contactPref === 'Phone'"
+                 [(ngModel)]="formData.phone" [class.my-valid]="phoneValidity"
+                 (input)="phoneValidator()" (blur)="onTouched('phone'); phoneValidator()"
+                 placeholder="0801 234 5678" required>
+          <small class="error-message">{{contactError}}</small>
+        </label>
+      </fieldset>
+      
+      <button id="submit-button" type="submit"
+              class="button white-bg-button"
+              *ngIf="myFormValidity"
+              [disabled]="!myFormValidity"
+              title="Submit your order.">
+          Place Order
+      </button>
+      <button id="submit-button" type="button"
+              class="button invalid-button"
+              *ngIf="!myFormValidity"
+              (click)="onSubmitAttempt()">
+          Place Order
+      </button>
+    </form>
+
+    <footer><small>Additional information for the buyer.</small></footer>
+  </div>
+</div>
+
+<!--fieldset *ngIf="custom">
+  <label>Description: 
+    <textarea name="customStyleDesc"
+              minlength="10"
+              [(ngModel)]="orderDetails.style.desc"
+              placeholder="Description of desired cloth style"
+              required>
+    </textarea>
+  </label>
+
+  <label>Samples: 
+    <input type="file"
+           name="sample1"
+           accept="image/*"
+           #sample1="ngModel"
+           [(ngModel)]="orderDetails.style.samples[0]"
+           required
+    ></label>
+    <input type="file"
+           name="sample2"
+           accept="image/*"
+           #sample2="ngModel"
+           [disabled]="!sample1.valid"
+           [(ngModel)]="orderDetails.style.samples[1]"
+    >
+    <input type="file"
+           name="sample3"
+           accept="image/*"
+           [disabled]="!sample2.value || !sample2.valid"
+           [(ngModel)]="orderDetails.style.samples[2]"
+    >
+</fieldset-->

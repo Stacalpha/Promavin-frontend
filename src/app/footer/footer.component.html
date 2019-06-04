@@ -1,0 +1,66 @@
+<footer id="page-footer" class="global-bg flex-box-vert">
+  <section id="page-conclusion">
+    <h2 id="tag-line-1">{{tagLine1}}</h2>
+    <h4 id="tag-line-2">{{tagLine2}}</h4>
+    <button id="footer-action-button"
+            class="button dark-button"
+            (click)="action()"
+          >
+      {{actionLabel}}
+    </button>
+  </section>
+
+  <section id="contact-us" class="flex-box-hor" tabindex="-1">
+    <div id="footer-left" tabindex="-1"> <!--contact us-->
+      <p id="contact-im" class="labeled-icon">
+        <span>Contact us using an option below.</span>
+        <img src="../../assets/icons/csr.png" class="footer-icons">
+      </p>
+      <a href="#" class="footer-icons contact-icons"
+         id="contact-whatsapp">
+        <img src="../../assets/icons/whatsapp.png">
+      </a>
+      <a href="#" class="footer-icons contact-icons"
+         id="contact-email">
+       <img src="../../assets/icons/email.png">
+      </a>		
+      <a href="#" class="footer-icons contact-icons"
+         id="contact-sms">
+       <img src="../../assets/icons/gsm.png">
+      </a>
+    </div>
+    <!---->
+    <div id="footer-right">
+      <p id="connect-with-us" class="labeled-icon">
+        <img src="../../assets/logo.png" class="footer-icons">
+        <span>Connect with us on social media</span>
+      </p>
+      <div id="social-icons-container">
+        <a href="#" id="fb-icon"
+           class="footer-icons social-icons">
+         <img src="../../assets/icons/fb.png">
+        </a>
+        <a href="#" id="twitter-icon"
+           class="footer-icons social-icons">
+         <img src="../../assets/icons/twitter.png">
+        </a>
+        <a href="#" id="insta-icon"
+           class="footer-icons social-icons">
+         <img src="../../assets/icons/insta.png">
+        </a>
+        <a href="#" id="linkedin-icon"
+           class="footer-icons social-icons">
+         <img src="../../assets/icons/linkedin.png">
+        </a>
+      </div>		
+    </div>
+  </section>
+
+  <div id="site-credits" class="flex-box-hor">
+    <small>
+      Website created by Stac <img src="../icons/email.jpg"> <img src="../icons/twitter.jpg">
+    </small>
+
+    <small>Icons sourced from <a href="http://icons8.com">Icons8.com</a></small>
+  </div>
+</footer>

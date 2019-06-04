@@ -1,0 +1,100 @@
+<app-header [caller]="'home'"></app-header>
+<section id="landing">
+  <div id="landing-content" class="flex-box-vert">
+    <p id="landing-text">
+      The perfect fit for every man,<br> guaranteed.
+    </p>
+    <!---->
+    <button class="button light-button"
+            (click)="showOrderWindow()"
+          >
+      Order Now
+    </button>
+  </div>
+</section>
+
+<section id="sales-pitch-section">
+  <h2>
+    <small>Finally,</small>
+    <br>Qaulity Service Delivery<br>
+    <small>in tailoring for Nigerians</small>
+  </h2>
+
+  <p id="section1" class="wide-paragraphs">
+    Ever had a tailor fail to deliver on time? 
+    Posted a "what I ordered vs. what I got" picture on twitter?
+    You don't have to go through that again.
+    <span class="half-line-break">&nbsp;</span>
+    At promavin, three things are most important to us: Quality, Timeliness, and of course Fit.
+    What is more, you don't have to leave the convenience of your home. We bring the service to you!
+  </p>
+
+  <section id="section2">
+    <div id="section2-wrapper">
+      <h3>
+        Bespoke tailoring at your convenience
+      </h3>
+      <!---->
+      <div class="flex-box-hor">
+        <div class="flex-box-vert">
+          <img src="../../assets/icons/checkout.png"/>          
+          <p>You place an order.</p>
+        </div>
+        <!---->
+        <div class="flex-box-vert">
+          <img src="../../assets/icons/measurement.png"/>
+          <p>
+            We contact you to schedule an appointment, 
+            usually at your home or office, 
+            where we take your measurements and optionally pick up your fabrics, 
+            if you choose to provide them yourself.
+          </p>
+        </div>
+        <!---->
+        <div class="flex-box-vert">
+          <img src="../../assets/icons/delivery.png"/>
+          <p>Your perfectly fitting outfit is ready within 2 weeks.</p>
+        </div>
+      </div>
+      <!---->
+      <button class="button light-button"
+              (click)="showOrderWindow()"
+          >
+        Place Order
+      </button>
+    </div>
+  </section>
+
+  <section id="section3">
+    <h4>Don't have a specific style in mind?</h4>
+    <p>
+      Step into our showroom. 
+      You might see something you like.
+    </p>
+    
+    <div class="flex-box-hor" id="featured-products">
+      <product-card *ngFor="let product of featuredProducts"
+                    [product]="product"
+                    [caller]="'home'"
+                    (orderClick)="showOrderWindow($event)"
+                  >
+      </product-card>
+      <a routerLink="./showcase">
+        <button class="button white-bg-button">
+          View all
+        </button>          
+      </a>
+      <div class="scrollable-flex-end-padding">&nbsp;</div>
+    </div>
+  </section>  
+</section>
+
+<app-order *ngIf="orderWindowDisplay"
+           [productId]="selectedProduct.name"
+           (orderClosed)="closeOrderWindow()"
+          >
+</app-order>
+<app-footer [caller]="'home'"
+            (orderClick)="showOrderWindow()"
+          >
+</app-footer>

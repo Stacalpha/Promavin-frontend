@@ -1,0 +1,9 @@
+{
+  "files.watcherExclude": {
+    "**/**": true,
+    "**/e2e/**": true,
+    "**/src/**": true
+  },
+"editor.minimap.renderCharacters": false,
+
+}

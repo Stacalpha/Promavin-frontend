@@ -1,0 +1,44 @@
+#page-header {
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  height: 10vh;
+  width: 100vw;
+  justify-content: space-between;
+  padding: 0 20px 0 5vw;
+  background-image: linear-gradient(to left, #5f0d1c, #85051c, #bd001b, #da1009); /* #1e0002,*/
+  /*Blue:- linear-gradient(to right, #1976d2, #215da8, #184580);/*, #0e2e5a, #042049*/
+  /*Red:- linear-gradient(to left, #4e0a16, #85051c, #bd001b, #da1009); /* #1e0002,*/
+  /*Pink:- linear-gradient(to right top, #500710, #781625, #a2263c, #ce3656, #fc4774);*/
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.6);
+}
+
+#logo {
+  height: 100%;
+  vertical-align: middle;
+}
+
+.nav-button {
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 1em;
+}
+
+.nav-button:hover {
+  background-color: #bd001b; /*Blue:- #1D6BC0;*/
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button:active {
+  background-color: #4e0a16; /*Blue:- #1d6bc09d;*/
+  box-shadow: 0 0 rgba(0, 0, 0, 0.0);
+}
+
+#page-title {
+  width: 40vw;
+  text-align: initial;
+}
+
+#other-title > span {
+  font-size: 1.3rem;
+}

@@ -1,0 +1,21 @@
+<app-header [caller]="'showcase'"></app-header>
+
+<div id="showcase-wrapper" class="flex-box-hor">
+  <product-card *ngFor="let product of catalogue"
+                [product]="product"
+                [caller]="'showcase'"
+                (orderClick)="showOrderWindow($event)"
+                >
+  </product-card>
+</div>
+
+<app-order *ngIf="orderWindowDisplay"
+           [productId]="selectedProduct.name"
+           (orderClosed)="closeOrderWindow()"
+          >
+</app-order>
+
+<app-footer [caller]="'showcase'"
+            (orderClick)="showOrderWindow()"
+          >
+</app-footer>
