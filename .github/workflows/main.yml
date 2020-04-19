@@ -11,6 +11,11 @@ jobs:
       - name: Checkout the repository # Checkout repo under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v2
       
+      - name: Clean install dependencies and build
+        run: |
+          npm ci
+          npm run build
+      
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@v1.3.0
         with:
