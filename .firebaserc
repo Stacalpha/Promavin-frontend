@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "getcouture"
+  },
+  "targets": {
+    "getcouture": {
+      "hosting": {
+        "preview": [
+          "deprev-getcouture"
+        ],
+        "prod": [
+          "getcouture"
+        ]
+      }
+    }
   }
 }
