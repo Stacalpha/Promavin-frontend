@@ -1,10 +1,8 @@
 const express = require('express');
 const app = express();
 
-const PORT = 3001;
-const build = './stable-build';
 const PORT = process.env.PORT || 3001;
-const build = './build';
+const build = './dist';
 
 app.use(express.static(build));
 
