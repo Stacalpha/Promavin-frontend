@@ -8,6 +8,8 @@
   /*Blue:- background-image: linear-gradient(to left bottom, #1976d2, #215da8, #184580, #0e2e5a);/*, #042049*/
   background-position: center bottom;
   background-attachment: fixed; /*ToDo: Darken background as user scrolls up.*/
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
 }
 
@@ -18,7 +20,6 @@
   padding: 50px 0 50px 10vw;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
 }
 
 #landing-content > button {
@@ -36,12 +37,10 @@
 
 #sales-pitch-section > h2 > small {
   font-weight: 400;
-  font-size: 0.55em;
 }
 
 #section1{
   margin-bottom: 100px;
-  font-size: 1.2rem;
   text-align: justify;
 }
 

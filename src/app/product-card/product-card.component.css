@@ -11,19 +11,16 @@
 }
 
 .product-name {
-  font-size: 1.2rem;
   font-style: normal;
   font-weight: 300;
   margin: 100px 0;
 }
 
 .product-price {
-  font-size: 1rem;
   text-align: left;
 }
 
 .delivery-count {
-  font-size: 1rem;
   text-align: right;
   position: absolute;
   bottom: 10%;

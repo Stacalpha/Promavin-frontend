@@ -19,7 +19,6 @@
   padding: 50px 10vw 50px 0;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
 }
 
 #landing-content > p {
@@ -38,7 +37,6 @@ main {
 }
 
 #about-text {
-  font-size: 1.2rem;
   margin-right: 20%;
   text-align: justify;
   z-index: 2;

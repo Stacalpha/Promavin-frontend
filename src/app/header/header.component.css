@@ -21,7 +21,6 @@
 .nav-button {
   background-color: transparent;
   box-shadow: none;
-  font-size: 1em;
 }
 
 .nav-button:hover {
@@ -40,5 +39,4 @@
 }
 
 #other-title > span {
-  font-size: 1.3rem;
 }
