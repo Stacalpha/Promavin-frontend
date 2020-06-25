@@ -31,8 +31,9 @@
 
   <section id="section2">
     <div id="section2-wrapper">
+      <!--span>Photo by <a href="https://unsplash.com/@kennyluoping?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Kenny Luo</a> on <a href="/s/photos/tailor-shop?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span-->
       <h3>
-        Bespoke tailoring at your convenience
+        Bespoke Tailoring at Your Convenience
       </h3>
       <!---->
       <div class="flex-box-hor">
@@ -65,7 +66,7 @@
     </div>
   </section>
 
-  <section id="section3">
+  <!--section id="section3">
     <h4>Don't have a specific style in mind?</h4>
     <p>
       Step into our showroom. 
@@ -76,8 +77,7 @@
       <product-card *ngFor="let product of featuredProducts"
                     [product]="product"
                     [caller]="'home'"
-                    (orderClick)="showOrderWindow($event)"
-                  >
+                    (orderClick)="showOrderWindow($event)">
       </product-card>
       <a routerLink="./showcase">
         <button class="button white-bg-button">
@@ -86,7 +86,7 @@
       </a>
       <div class="scrollable-flex-end-padding">&nbsp;</div>
     </div>
-  </section>  
+  </section-->  
 </section>
 
 <app-order *ngIf="orderWindowDisplay"

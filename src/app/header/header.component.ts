@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
   navTargets:string[] = [];
 
   getNavTargets() {
-    let allPages = ['home', 'showcase', 'about', 'contact'];
+    let allPages = ['home', /*'showcase',*/ 'about', 'contact'];
     for (let page of allPages) {
       if (page == this.caller) continue;
       this.navTargets.push(page);

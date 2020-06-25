@@ -1,12 +1,12 @@
 #page-footer {
   position: relative;
-  margin-top: 10px;
-	padding-top: 8px;     
+  /*margin-top: 10px;*/
+  padding-top: 8px;   
   justify-content: space-between;
   min-height: 60vh;
   width: 100vw;
-	background-image: radial-gradient(circle, #e61109, #bd001b, #85051c, #4e0a16); /* #1e0002,*/
-	/*radial-gradient(circle, #fc4774, #ce3656, #a2263c, #781625, #500710);*/
+  background-image: radial-gradient(circle, #e61109, #bd001b, #85051c, #4e0a16); /* #1e0002,*/
+  /*radial-gradient(circle, #fc4774, #ce3656, #a2263c, #781625, #500710);*/
   /*Red:- background-image: radial-gradient(circle, #f5130a, #bd001b, #85051c, #4e0a16); /* #1e0002,*/
   /*Blue:- background-image: radial-gradient(circle, #2876d2, #215da8, #184580);/*, #0e2e5a, #042049*/    
 }

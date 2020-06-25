@@ -7,7 +7,7 @@
   background-image: url("../../assets/images/about_pic2_trans2.png"),
                     linear-gradient(to right top, #4e0a16, #85051c, #bd001b, #f5130a);
   background-repeat: no-repeat;
-  background-position: 15% center;
+  background-position: 15% bottom;
   justify-content: center;
   color: white;
 }
@@ -47,5 +47,5 @@ main > img {
   right: 0;
   top: 0;
   height: 100%;
-  object-position: center center;
+  object-position: center bottom;
 }
