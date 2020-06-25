@@ -5,6 +5,8 @@
     "start": "ng serve",
     "start:build": "node server.js",
     "build": "ng build --prod",
+    "deploy:prod": "firebase deploy --only hosting:prod",
+    "deploy:preview": "firebase deploy --only hosting:preview",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
